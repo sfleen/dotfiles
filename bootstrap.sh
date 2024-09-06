@@ -12,4 +12,7 @@ sudo apt install -y \
     man \
     ripgrep
 
-chsh -c /usr/bin/fish
+mkdir -p ~/.config/fish
+cp ./config.fish ~/.config/fish/config.fish
+
+chsh -s /usr/bin/fish
