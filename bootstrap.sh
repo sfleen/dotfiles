@@ -16,3 +16,5 @@ mkdir -p ~/.config/fish
 cp ./config.fish ~/.config/fish/config.fish
 
 chsh -s /usr/bin/fish
+
+fish -c ./bootstrap_fish.sh

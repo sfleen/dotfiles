@@ -11,6 +11,8 @@ curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fi
 fisher install IlanCosman/tide@v6
 printf "y\n323411231221y" | tide configure
 
+scurl https://run.linkerd.io/install-edge | sh
+
 git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
 rm -rf ~/.config/nvim/.git
 nvim

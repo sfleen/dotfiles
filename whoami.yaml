@@ -21,6 +21,28 @@ spec:
         ports:
          - containerPort: 80
 ---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: inspect
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: inspect
+  template:
+    metadata:
+      labels:
+        app: inspect
+      annotations:
+        linkerd.io/inject: enabled
+    spec:
+      containers:
+      - name: inspect
+        image: alpine
+        command: ["/bin/sh", "-c", "--"]
+        args: ["while true; do sleep 3600; done;"]
+---
 apiVersion: v1
 kind: Service
 metadata:

@@ -2,6 +2,8 @@ if status is-interactive
 end
 
 fish_add_path /opt/nvim-linux64/bin
+fish_add_path $HOME/.linkerd2/bin
+set -gx LINKERD_TAG $(linkerd version --client --short)
 
 alias k=kubectl
 alias vi=nvim
